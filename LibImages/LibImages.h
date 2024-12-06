@@ -5,8 +5,10 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
+#ifdef USE_SSE
 #include <xmmintrin.h>
 #include <x86intrin.h>
+#endif
 
 //! Local includes
 
