@@ -1,4 +1,4 @@
-CXXFLAGS ?= -march=native -O3
+CXXFLAGS ?= -march=native -O3 #-DUSE_SSE -DUSE_AVX
 override CXXFLAGS := $(CXXFLAGS) `gdal-config --cflags`
 override LDLIBS  := $(LDLIBS) `gdal-config --libs`
 
