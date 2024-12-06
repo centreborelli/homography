@@ -19,8 +19,8 @@ clean:
 
 test: homography
 	./$^ test_data/input_uint16.tif -h "`cat test_data/hom2.txt`" test_data/out.tif 800 800
-	plambda test_data/out.tif test_data/out.jpg / | imprintf "%m\n"
-	@echo "TEST: the number above must be between 1.0 and 2.0"
+	plambda test_data/out.tif test_data/out.npy / | imprintf "%m\n"
+	@echo "TEST: the number above must be very close to 1"
 
 
 # hack (compatibility flags for badly configured OSX clang)
